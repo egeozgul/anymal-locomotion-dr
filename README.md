@@ -1,8 +1,9 @@
 # Quadruped Locomotion with Domain Randomization in Isaac Lab
 
+<p align="center"><b>Baseline policy — keyboard-controlled single robot on rough terrain</b></p>
 <p align="center"><img src="demo.gif" width="100%"/></p>
 
-<p align="center"><b>25 environments trained simultaneously</b></p>
+<p align="center"><b>25 environments trained simultaneously (top view)</b></p>
 <p align="center"><img src="demo_multi.gif" width="100%"/></p>
 
 Training PPO locomotion policies for the [Anymal C](https://www.anybotics.com/anymal-autonomous-legged-robot/) quadruped in [Isaac Lab](https://isaac-sim.github.io/IsaacLab/) and evaluating the effect of extended domain randomization on sim-to-real transfer robustness.
@@ -74,7 +75,7 @@ The extended DR policy reaches a comparable terrain curriculum level (5.94 vs 5.
 
 The performance gap — lower reward, shorter episodes, higher fall rate — reflects the cost of robustness: the policy must handle a much wider distribution of physics parameters at every episode reset, making convergence harder and peak performance lower. This tradeoff is well-documented in sim-to-real locomotion literature and is the expected outcome of aggressive domain randomization.
 
-For real-world deployment, the extended DR policy is the preferred choice: friction, mass distribution, and actuator characteristics of a physical robot are never exactly known, and a policy trained only on nominal parameters is likely to fail under even small real-world deviations.
+This ablation study quantifies the robustness-performance tradeoff of domain randomization. For sim-to-real transfer, the extended DR policy would be the preferred choice: friction, mass distribution, and actuator characteristics of a physical robot are never exactly known, and a policy trained only on nominal parameters is likely to fail under real-world deviations.
 
 ---
 
