@@ -1,6 +1,6 @@
 # Quadruped Locomotion with Domain Randomization in Isaac Lab
 
-![Demo](demo.gif)
+<p align="center"><img src="demo.gif" width="100%"/></p>
 
 Training PPO locomotion policies for the [Anymal C](https://www.anybotics.com/anymal-autonomous-legged-robot/) quadruped in [Isaac Lab](https://isaac-sim.github.io/IsaacLab/) and evaluating the effect of extended domain randomization on sim-to-real transfer robustness.
 
